@@ -1,0 +1,124 @@
+.top{
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    font-family: "Avenir Next Condensed";
+
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #5598c3;
+    opacity: 0.5; /* Firefox */
+    font-family: "Avenir Next Condensed", sans-serif;;
+    margin-left: 10px;
+    padding: 12px;
+
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+/* visited link */
+a:visited {
+    color: #3d5564;
+}
+
+/* mouse over link */
+a:hover {
+    color: #8bacbf;
+}
+
+/* selected link */
+a:active {
+    color: #3d5564;
+}
+.searchBar{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    padding: 3px
+}
+
+
+
+
+.topLeft,.topRight{
+    flex: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+}
+.topCenter{
+    flex: 3px;
+    align-items: center;
+    text-align: center;
+}
+.topIcon{
+    font-size: 20px;
+    margin-right: 3px;
+    color: #3d5564;
+    cursor: pointer;
+}
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.topList{
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    font-family: "Avenir Next Condensed";
+    text-align: center;
+    align-items: center;
+}
+.topListItem{
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    /*cursor: pointer;*/
+    color: #3d5564;
+    padding: 10px;
+
+}
+
+.topSearchIcon{
+    font-size:18px;
+    color: #457b9d;
+    cursor: pointer;
+    margin-left: 15px;
+    mrgin-right: 15px;
+    width: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+
+}
+

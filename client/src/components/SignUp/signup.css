@@ -1,0 +1,92 @@
+.signup{
+    height:calc( 80vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signupTitle{
+    margin: 8px;
+    padding: 5px;
+    width: 15%;
+    border-top: 1px solid #fafafa;
+    border-bottom:1px solid #fafafa ;
+    /*align-items: center;*/
+    display: inline-block;
+    font-family: "Avenir Next Condensed";
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    color: #222;
+    font-weight: 200;
+    line-height:20px;
+}
+.errors{
+    font-family: "Avenir Next Condensed";
+    color:red;
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.signupForm{
+
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+}
+.signupForm > label{
+    margin: 10px 0;
+
+}
+
+.signupInput{
+    padding: 4px;
+    background-color: white;
+    border: 1px solid oldlace;
+    font-family: Helvetica;
+    margin-bottom: 3px;
+
+}
+.signupInput:focus{
+    border:none;
+}
+
+.signupButton{
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    font-family: "Avenir Next Condensed";
+    font-weight: 200;
+
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d4bc67;
+}
+.signupInput::placeholder{
+    font-weight: 200;
+    text-align: center;
+    font-family: "Avenir Next Condensed";
+    border:none;
+}
+
+.signupButton{
+    padding: 20px;
+    /*width: 100px;*/
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 200;
+    font-family: "Avenir Next Condensed";
+    padding: 10px;
+    background-color: #a7a4a4;
+    opacity: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

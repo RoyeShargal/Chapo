@@ -1,0 +1,94 @@
+.write{
+    padding-top: 60px;
+
+
+}
+.writeForm{
+/*position: relative;*/
+}
+.writeFormGroup{
+    margin-left: 150px;
+    align-items: center;
+    display: flex;
+}
+
+
+.writeTitle{
+    }
+
+.writeInput{
+    font-size: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    color: #3d5564;
+    margin-left: 0;
+
+    font-family: "Avenir Next Condensed";
+
+}
+.content{
+    height: 200px;
+    width: 400px;
+}
+
+.custom-file-upload {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: "Avenir Next Condensed";
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-color: #fafafa;
+}
+.writeInputTitle{
+    font-size: 20px;
+    font-family: "Avenir Next Condensed";
+
+    padding: 5px;
+
+    font-family: "Avenir Next Condensed";
+    font-size: 20px;
+    color: #3d5564;
+    font-weight: 380;
+    line-height:20px;
+
+}
+.writeInput:focus{
+    outline: none;
+}
+.writeInput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+    font-family: "Avenir Next Condensed";
+    font-size: 14px;
+    font-weight: 300;
+}
+.titleBOX{
+    width: 400px;
+
+}
+
+
+.writeSubmit{
+    margin-top: 10px;
+    color: #fafafa;
+    background-color: #3d5564;
+    align-items: center;
+    border: none;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    opacity: 100%;
+    justify-content: center;
+    border-radius: 2px;
+    font-family: "Avenir Next Condensed";
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 0;
+
+}
+.writeSubmit:hover{
+    background-color: #5a7e94;
+}

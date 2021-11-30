@@ -1,0 +1,28 @@
+.botBar{
+    background-color: #3d5564;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 110%;
+    height: 36px;
+    margin-left: -10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+}
+p{
+    font-size: 14px;
+    color: #d4bc67;
+    opacity: 40%;
+    margin-bottom: 15px;
+}
+.icons{
+    font-size: 50px;
+    margin-right: 2px;
+    border: none;
+    color: #d4bc67;
+    cursor: pointer;
+
+}

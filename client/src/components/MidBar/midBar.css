@@ -1,0 +1,26 @@
+.mid{
+    width: 100%;
+    height: 60px;
+    background-color: #3d5564;
+    align-items: center;
+    font-family: "Avenir Next Condensed";
+    border-radius: 1px;
+    position: absolute;
+    right: 0;
+}
+
+.photo{
+    height: 220px;
+}
+
+.item {
+    color: #cdcdcd;
+    position: absolute;
+    right: 45.9%;
+    font-size: 18px;
+    font-weight: 350;
+    /*cursor: pointer;*/
+    padding: 10px;
+    bottom: 7px;
+
+}

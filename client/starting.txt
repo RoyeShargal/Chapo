@@ -1,0 +1,3 @@
+backend: inside api -> python api.py
+frontend: inside client -> npm start
+redis-server: inside terminal -> redis-server 
