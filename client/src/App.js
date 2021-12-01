@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn/signin";
 import SideBar from "./components/SideBar/sidebar";
 import About from "./components/About/about";
 import Profile from "./components/Profile/profile"
+import LikedPosts from "./components/LikedPosts/LikedPosts"
 import ChangePassword from "./components/ChangePassword/changepassword";
 import {
     BrowserRouter as Router,
@@ -36,6 +37,11 @@ function App() {
             <Switch>
                 <Route path="/profile">
                     <Profile/>
+                </Route>
+            </Switch>
+            <Switch>
+                <Route path="/myposts">
+                    <LikedPosts/>
                 </Route>
             </Switch>
             <Switch>

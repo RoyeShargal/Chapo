@@ -51,6 +51,13 @@ export default function TopBar(){
 
                         <Link to ="/register" className="a">SIGNUP</Link>
                     </li>)}
+                    {user.email != null ? (<li className="topListItem">
+                        <Link to ="/myposts" className="a">LIKED POSTS</Link>
+
+                    </li>):(<li className="topListItem" >
+
+                        <Link to ="/register" className="a">SIGNUP</Link>
+                    </li>)}
 
 
                     <li className="topListItem" >

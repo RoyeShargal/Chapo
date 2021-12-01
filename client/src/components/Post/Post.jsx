@@ -33,6 +33,20 @@ export default function Post({aSinglePost})
 
         }
     }
+    let userid;
+    if(user != null){
+     userid = user.id}
+    else{
+         userid=0;
+    }
+    const likePost = async () => {
+        await httpClient.post("//127.0.0.1:5000/likeapost",{
+            postId,
+            userid
+
+        })
+        window.alert('Added to liked posts!')
+    }
 
     return(
         <div className="post">
@@ -44,6 +58,9 @@ export default function Post({aSinglePost})
                     return(<p className={"tags"}>{tag}</p>)
                 })}
                 <p className={"postDate"}>{aSinglePost.date} </p>
+                {user.email != null ? (
+                    <i className="far fa-heart heart " onClick={likePost}></i>
+                ):(<p></p>)}
                 {/*{aSinglePost.authorId === user.id ? (<i className="deletebtn far fa-trash-alt " onClick={deletePost}/>)*/}
                 {/*    :*/}
                 {/*    (<p></p>)}*/}

@@ -54,8 +54,13 @@ def userSerializer(user):
     'email': user.email,
     'date': user.date,
     'token': user.token,
-    'isActive':user.isActive
-        }
+    'isActive':user.isActive}
+
+def relationSerializer(usersposts):
+    return{
+    'user_id':likedposts.user_id,
+    'post_id': likedpsots.post_id
+    }
 
 @app.route("/postsbytags", methods=["GET","POST"], strict_slashes=False)
 def getPostsByTags():
@@ -76,6 +81,21 @@ def allPosts():
     posts = Post.query.all()
     return (jsonify([*map(postSerializer, posts)]))
 
+# @app.route("/specificposts", methods=['POST', 'GET'], strict_slashes=False)
+# def specificPosts():
+#     reqTable = usersposts.query.all()
+
+
+#     requiredPosts = []
+#     userid = session.get("user_id")
+#     user = User.query.filter_by(id=1).first()
+#     post = Post.query.all()
+#     for x in post:
+#         print(x.postsliked)
+#
+#     return (jsonify([*map(postSerializer, requiredPosts)]))
+
+
 @app.route("/deletepost", methods=['GET','POST'])
 def deletePost():
     print('reached')
@@ -84,6 +104,35 @@ def deletePost():
     post = Post.query.filter_by(id=postToDeleteId).first()
     db.session.delete(post)
     db.session.commit()
+
+@app.route("/likeapost", methods=['GET', 'POST'])
+def likePost():
+    post_id = request.json['postId']
+    user_id = session.get("user_id")
+
+    post = Post.query.filter_by(id=post_id).first()
+    user = User.query.filter_by(id=user_id).first()
+    if user == None:
+        jsonify({"Error": "User Does Not Exists."}), 401
+    if user in post.postsliked:
+        print('error mate')
+    else:
+        post.postsliked.append(user)
+        db.session.commit()
+        print('alright')
+    return 'Liked!'
+
+@app.route("/specificposts", methods=['POST', 'GET'], strict_slashes=False)
+def specificPosts():
+    posts = Post.query.all()
+    userid = session.get("user_id")
+    user = User.query.filter_by(id=userid).first()
+    requiredPosts = []
+    for post in posts:
+        if user in post.postsliked:
+            requiredPosts.append(post)
+    return (jsonify([*map(postSerializer, requiredPosts)]))
+
 
 # @app.route("/comments", methods=['GET','POST'], strict_slashes=False)
 # def SpecificPostComments():

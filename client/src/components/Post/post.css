@@ -13,6 +13,30 @@ width: 60%;
 
 
 }
+.like{
+    cursor: pointer;
+    font-family: "Avenir Next Condensed";
+    padding:0.2em 0.8em;
+    margin:0 0.3em 0.2em 0;
+    border-radius:1em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:250;
+    color:#FFFFFF;
+    background-color: #417698;
+    text-align:center;
+    transition: all 0.2s;
+
+}
+.heart{
+    cursor: pointer;
+    position: relative;
+    left: 240px;
+    top: -33px;
+    opacity: 50%;
+    color: red;
+
+}
 .postAuthor{
     display: flex;
     flex-direction: column;
@@ -98,7 +122,6 @@ width: 60%;
 
 .postDate{
     display: flex;
-
     flex-direction: column;
     font-family: "Avenir Next Condensed";
     text-align: left;
