@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, session, abort, Response
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
+from flask.helpers import send_from_directory
 from flask_bcrypt import Bcrypt
 from flask_session import Session
 from config import ApplicationConfig
@@ -13,7 +14,7 @@ from models import *
 from flask_migrate import Migrate
 import uuid #responsible for the unique token for each user.
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='../client/build', static_url_path='')
 app.config.from_object(ApplicationConfig)
 
 bcrypt = Bcrypt(app)
@@ -24,6 +25,9 @@ db.init_app(app) #Add this line Before migrate line
 migrate = Migrate(app, db)
 with app.app_context():
     db.create_all()
+
+def serve():
+    return send_from_directory(app.static_folder, 'index.js')
 
 def postSerializer(post):
     user = User.query.filter_by(id=post.userid).first()
