@@ -69,7 +69,7 @@ width: 60%;
 .postContent{
     font-family: "Avenir Next Condensed";
     text-align: left;
-    color: black;
+    color: #3d5564;
     font-size: 19px;
     font-weight: 400;
     margin-left:2px;
@@ -125,7 +125,7 @@ width: 60%;
     flex-direction: column;
     font-family: "Avenir Next Condensed";
     text-align: left;
-    color: black;
+    color: #3d5564;
     font-size: 14px;
     font-weight: 300;
     margin-left:2px;

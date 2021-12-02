@@ -1,7 +1,7 @@
-from flask import Flask, jsonify, request, session, abort, Response
+from flask import Flask, jsonify, request, session, abort, Response, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
-from flask.helpers import send_from_directory
+# from flask.helpers import send_from_directory
 from flask_bcrypt import Bcrypt
 from flask_session import Session
 from config import ApplicationConfig
@@ -14,7 +14,8 @@ from models import *
 from flask_migrate import Migrate
 import uuid #responsible for the unique token for each user.
 
-app = Flask(__name__,static_folder='../client/build', static_url_path='')
+#,static_folder='../client/build', static_url_path=''
+app = Flask(__name__, static_folder="../client/build", static_url_path='')
 app.config.from_object(ApplicationConfig)
 
 bcrypt = Bcrypt(app)
@@ -26,8 +27,10 @@ migrate = Migrate(app, db)
 with app.app_context():
     db.create_all()
 
+@app.route('/home')
 def serve():
-    return send_from_directory(app.static_folder, 'index.js')
+    print('ey')
+    return send_from_directory(app.static_folder, 'index.html')
 
 def postSerializer(post):
     user = User.query.filter_by(id=post.userid).first()
@@ -264,4 +267,5 @@ def change_pass():
     return "Success!"
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.debug=True
+    app.run()
